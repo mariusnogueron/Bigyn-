@@ -1,0 +1,79 @@
+//COLORS
+$--green-color: #B2F76E;
+$--pink-color: #EAACC9;
+$--black: rgba(0, 0, 0, 0.9);
+
+//FONT
+$--Avenue: 'Avenue X';
+$--Seamus: 'Seamus Trial';
+$--Aileron-Semibold: 'Aileron Semibold';
+$--Aileron-LightItalic: 'Aileron LightItalic';
+
+@font-face {
+  font-family: 'Avenue X';
+  src: url("//fonts/Avenue_X.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Seamus Trial';
+  src: url("//fonts/SeamusTrial-Heavy.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Aileron Semibold';
+  src: url("//fonts/aileron/Aileron-SemiBold.otf") format("opentype");
+}@font-face {
+  font-family: 'Aileron LightItalic';
+  src: url("//fonts/aileron/Aileron-LightItalic.otf") format("opentype");
+}
+
+//MIXIN
+@mixin button ($color : $--black ,$colorBackground : $--green-color, $colorBorder : transparent ) {
+  color: $color;
+  background-color: $colorBackground;
+  border: 1px solid $colorBorder;
+  font-family: $--Avenue;
+  text-decoration: none;
+  padding: .5rem 1.5rem;
+  border-radius: 9999px;
+  font-size: clamp(1.5rem,2svw, 2rem);
+}
+
+.button__fictive-accept {
+  @include button($color: $--green-color, $colorBackground: $--black ,$colorBorder: $--black);
+  border: 4px solid $--green-color;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 4px 4px;
+}
+
+.inactive {
+  display: none;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.background__prevention {
+  width: 100%;
+  height: 100svh;
+  background: $--green-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $--Avenue;
+  flex-direction: column;
+
+  p {
+    font-size: clamp(1.5rem,3svw, 3rem);
+  }
+}
+
+.container__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .button__header {
+    @include button;
+  }
+}

@@ -1,3 +1,69 @@
+@font-face {
+  font-family: "Avenue X";
+  src: url("//fonts/Avenue_X.otf") format("opentype");
+}
+@font-face {
+  font-family: "Seamus Trial";
+  src: url("//fonts/SeamusTrial-Heavy.otf") format("opentype");
+}
+@font-face {
+  font-family: "Aileron Semibold";
+  src: url("//fonts/aileron/Aileron-SemiBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Aileron LightItalic";
+  src: url("//fonts/aileron/Aileron-LightItalic.otf") format("opentype");
+}
+.button__fictive-accept {
+  color: #B2F76E;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  font-family: "Avenue X";
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  font-size: clamp(1.5rem, 2svw, 2rem);
+  border: 4px solid #B2F76E;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 4px 4px;
+}
 
+.inactive {
+  display: none;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.background__prevention {
+  width: 100%;
+  height: 100svh;
+  background: #B2F76E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Avenue X";
+  flex-direction: column;
+}
+.background__prevention p {
+  font-size: clamp(1.5rem, 3svw, 3rem);
+}
+
+.container__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container__header .button__header {
+  color: rgba(0, 0, 0, 0.9);
+  background-color: #B2F76E;
+  border: 1px solid transparent;
+  font-family: "Avenue X";
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  font-size: clamp(1.5rem, 2svw, 2rem);
+}
 
 /*# sourceMappingURL=style.css.map */
