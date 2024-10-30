@@ -8,12 +8,31 @@
 }
 @font-face {
   font-family: "Aileron Semibold";
-  src: url("//fonts/aileron/Aileron-SemiBold.otf") format("opentype");
+  src: url("//fonts/Aileron-SemiBold.otf") format("opentype");
 }
 @font-face {
-  font-family: "Aileron LightItalic";
-  src: url("//fonts/aileron/Aileron-LightItalic.otf") format("opentype");
+  font-family: "Aileron";
+  src: url("//fonts/Aileron-LightItalic.otf") format("opentype");
 }
+@media (max-width: 479px) {
+  body {
+    display: none;
+  }
+}
+.inactive {
+  display: none;
+}
+
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: fit-content;
+}
+
+h1 {
+  margin: 0;
+}
+
 .button__fictive-accept {
   color: #B2F76E;
   background-color: rgba(0, 0, 0, 0.9);
@@ -25,15 +44,6 @@
   font-size: clamp(1.5rem, 2svw, 2rem);
   border: 4px solid #B2F76E;
   box-shadow: rgba(0, 0, 0, 0.24) 0 4px 4px;
-}
-
-.inactive {
-  display: none;
-}
-
-body {
-  margin: 0;
-  box-sizing: border-box;
 }
 
 .background__prevention {
@@ -51,19 +61,151 @@ body {
 }
 
 .container__header {
-  display: flex;
+  display: inline-flex;
+  position: fixed;
+  width: -webkit-fill-available;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem;
+  max-width: 1440px;
 }
-.container__header .button__header {
+.container__header .img-logo img {
+  width: clamp(2.5rem, 3svw, 4rem);
+}
+.container__header .button__header a {
   color: rgba(0, 0, 0, 0.9);
   background-color: #B2F76E;
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0.9);
   font-family: "Avenue X";
   text-decoration: none;
   padding: 0.5rem 1.5rem;
   border-radius: 9999px;
-  font-size: clamp(1.5rem, 2svw, 2rem);
+  font-size: 1rem;
+}
+
+.container__home {
+  height: 100svh;
+  position: relative;
+  max-width: 1440px;
+}
+
+.main-content__home {
+  position: relative;
+  height: 100%;
+  z-index: -1;
+}
+.main-content__home .grid__images {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  width: 100svw;
+  height: 100%;
+  max-width: 1440px;
+  aspect-ratio: 1/1;
+}
+.main-content__home .grid__images img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.main-content__home .grid__images .image-grid-1 {
+  grid-area: 9/7/14/11;
+  aspect-ratio: 1/1;
+  max-width: 300px;
+}
+.main-content__home .grid__images .image-grid-2 {
+  grid-area: 4/2/9/5;
+  aspect-ratio: 1/1;
+  max-width: 266px;
+}
+.main-content__home .grid__images .image-grid-3 {
+  grid-area: 2/6/5/8;
+  aspect-ratio: 1/1;
+  max-width: 200px;
+}
+.main-content__home .grid__images .image-grid-4 {
+  grid-area: 16/10/19/13;
+  aspect-ratio: 1/1;
+  max-width: 200px;
+}
+.main-content__home .grid__images .image-grid-5 {
+  grid-area: 4/10/7/13;
+  aspect-ratio: 1/1;
+  max-width: 235px;
+}
+.main-content__home .grid__images .image-grid-6 {
+  grid-area: 17/3/19/5;
+  aspect-ratio: 1/1;
+  max-width: 113px;
+}
+.main-content__home .title-home {
+  position: absolute;
+  top: 470px;
+  left: 120px;
+}
+.main-content__home .title-home h1 {
+  font-family: "Seamus Trial";
+  color: #B2F76E;
+  font-size: clamp(3rem, 12svw, 8rem);
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.main-content__home .title-home span {
+  font-family: "Aileron";
+  width: 100%;
+  display: block;
+  font-size: 1.5rem;
+}
+.main-content__home .bow-arrow__scroll {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main-content__home .bow-arrow__scroll .container__text-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  animation: rotate360infinite 8s linear infinite;
+}
+.main-content__home .bow-arrow__scroll .container__text-arrow span {
+  position: absolute;
+  font-family: "Avenue X";
+}
+.main-content__home .bow-arrow__scroll .container__text-arrow span:nth-child(1) {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main-content__home .bow-arrow__scroll .container__text-arrow span:nth-child(2) {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(90deg) translateY(-100%);
+}
+.main-content__home .bow-arrow__scroll .container__text-arrow span:nth-child(3) {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}
+.main-content__home .bow-arrow__scroll .container__text-arrow span:nth-child(4) {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(-90deg) translateY(-100%);
+}
+
+@keyframes rotate360infinite {
+  from {
+    transform: translateY(-50%) translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) translateX(-50%) rotate(360deg);
+  }
+}
+.transition__bar {
+  height: 100svh;
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */
