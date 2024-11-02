@@ -1,0 +1,30 @@
+//COLORS
+$--green-color: #B2F76E;
+$--pink-color: #EAACC9;
+$--black: rgba(0, 0, 0, 0.9);
+
+//FONT
+$--Avenue: 'Avenue X';
+$--Seamus: 'Seamus Trial';
+$--Aileron-Semibold: 'Aileron Semibold';
+$--Aileron-LightItalic: 'Aileron';
+
+@font-face {
+  font-family: 'Avenue X';
+  src: url("//fonts/Avenue_X.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Seamus Trial';
+  src: url("//fonts/SeamusTrial-Heavy.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Aileron Semibold';
+  src: url("//fonts/Aileron-SemiBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Aileron';
+  src: url("//fonts/Aileron-LightItalic.otf") format("opentype");
+}

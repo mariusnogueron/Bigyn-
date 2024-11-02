@@ -1,0 +1,141 @@
+
+//HOME
+
+.container__home {
+  height: 100svh;
+  position: relative;
+  max-width: 1440px;
+}
+
+.main-content__home {
+  position: relative;
+  height: 100%;
+  z-index: -1;
+
+
+  .grid__images {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    width: 100svw;
+    height: 100%;
+    max-width: 1440px;
+    aspect-ratio: 1 / 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .image-grid-1 {
+      grid-area: 9 / 7 / 14 / 11;
+      aspect-ratio: 1/1;
+      max-width: 300px;
+    }
+    .image-grid-2 {
+      grid-area: 4 / 2 / 9 / 5;
+      aspect-ratio: 1/1;
+      max-width: 266px;
+    }
+    .image-grid-3 {
+      grid-area: 2 / 6 / 5 / 8;
+      aspect-ratio: 1/1;
+      max-width: 200px;
+    }
+    .image-grid-4 {
+      grid-area: 16 / 10 / 19 / 13;
+      aspect-ratio: 1/1;
+      max-width: 200px;
+
+    }
+    .image-grid-5 {
+      grid-area: 4 / 10 / 7 / 13;
+      aspect-ratio: 1/1;
+      max-width: 235px;
+    }
+    .image-grid-6 {
+      grid-area:  17 / 3 / 19 / 5;
+      aspect-ratio: 1/1;
+      max-width: 113px;
+    }
+
+  }
+
+  .title-home {
+    position: absolute;
+    top: 470px;
+    left: 120px;
+    h1 {
+      font-family: $--Seamus;
+      color: $--green-color;
+      font-size: clamp(3rem,12svw, 8rem);
+      //font-size: 120px;
+      text-decoration: underline;
+      text-transform: uppercase;
+    }
+
+    span {
+      font-family: $--Aileron-LightItalic;
+      width: 100%;
+      display: block;
+      font-size: 1.5rem;
+    }
+  }
+
+  .bow-arrow__scroll {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .container__text-arrow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100px;
+      height: 100px;
+      animation: rotate360infinite 8s linear infinite;
+
+      span {
+        position: absolute;
+        font-family: $--Avenue;
+      }
+
+      span:nth-child(1) {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      span:nth-child(2) {
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%) rotate(90deg) translateY(-100%);
+      }
+
+      span:nth-child(3) {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) rotate(180deg);
+      }
+
+      span:nth-child(4) {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%) rotate(-90deg) translateY(-100%);
+      }
+    }
+  }
+}
+
+//ANIMATION
+
+@keyframes rotate360infinite {
+  from {
+    transform: translateY(-50%) translateX(-50%) rotate(0deg)
+  }
+  to {
+    transform: translateY(-50%) translateX(-50%) rotate(360deg)
+  }
+}

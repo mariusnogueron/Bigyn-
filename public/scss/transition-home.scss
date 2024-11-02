@@ -1,0 +1,18 @@
+.transition__bar {
+  height: 100svh;
+  display: flex;
+
+
+  .odd-bar {
+    background: $--green-color;
+    height: 100%;
+    width: calc(100% / 6);
+  }
+
+  .even-bar {
+    height: 100%;
+    width: calc(100% / 6);
+    background: $--pink-color;
+  }
+}
+

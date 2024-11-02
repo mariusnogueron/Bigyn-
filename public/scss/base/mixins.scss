@@ -1,0 +1,17 @@
+//MIXIN
+@mixin button ($color : $--black ,$colorBackground : $--green-color, $colorBorder : transparent, $font-size :clamp(1.5rem,2svw, 2rem)  ) {
+  color: $color;
+  background-color: $colorBackground;
+  border: 1px solid $colorBorder;
+  font-family: $--Avenue;
+  text-decoration: none;
+  padding: .5rem 1.5rem;
+  border-radius: 9999px;
+  font-size: $font-size;
+}
+
+@mixin barScroll ($color) {
+  background: $color;
+  height: 100%;
+  width: calc(100% / 6);
+}

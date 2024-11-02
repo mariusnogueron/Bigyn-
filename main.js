@@ -2,29 +2,29 @@ import './style.scss'
 
 
 
-const numberIteration = 6;
-const barContainer = document.querySelector('.transition__bar')
+const transitionBar = document.querySelector('.transition__bar');
 
+const evenBar = document.createElement('div');
+evenBar.classList.add('even-bar');
+const oddBar = document.createElement('div');
+oddBar.classList.add('odd-bar');
 
-for (let i = 0; i < numberIteration; i++) {
-
-    barContainer.forEach( `<div class = ${numberIteration} ></div>`);
+for (let i = 0; i < 6; i++) {
+    console.log(i)
 
     if (i % 2 === 0) {
-        barContainer.style.backgroundColor = '$--pink-color';
-    } else {
-        barContainer.style.backgroundColor = '$--green-color';
+        transitionBar.appendChild(oddBar.cloneNode(true));
     }
-
-    barContainer.style.height = '100%';
-    barContainer.style.width = 'calc(100% / 6)';
+    else {
+        transitionBar.appendChild(evenBar.cloneNode(true));
+    }
 }
 
 
 
-const buttonAccept = document.querySelector('.button__fictive-accept');
-
-buttonAccept.addEventListener('click', () => {
-    document.querySelector('.background__prevention').style.display = 'none';
-})
+// const buttonAccept = document.querySelector('.button__fictive-accept');
+//
+// buttonAccept.addEventListener('click', () => {
+//     document.querySelector('.background__prevention').style.display = 'none';
+// })
 

@@ -1,0 +1,42 @@
+//HEADER
+
+.button__fictive-accept {
+  @include button($color: $--green-color, $colorBackground: $--black ,$colorBorder: $--black);
+  border: 4px solid $--green-color;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 4px 4px;
+}
+
+.background__prevention {
+  width: 100%;
+  height: 100svh;
+  background: $--green-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $--Avenue;
+  flex-direction: column;
+
+  p {
+    font-size: clamp(1.5rem,3svw, 3rem);
+  }
+}
+
+.container__header {
+  display: inline-flex;
+  position: fixed;
+  width: -webkit-fill-available;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  max-width: 1440px;
+
+  .img-logo img {
+    width: clamp(2.5rem,3svw, 4rem);
+  }
+
+  .button__header {
+    a {
+      @include button($colorBorder : $--black, $font-size : 1rem);
+    }
+  }
+}

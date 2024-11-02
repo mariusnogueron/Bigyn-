@@ -1,0 +1,17 @@
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: fit-content;
+}
+
+h1 {
+  margin: 0;
+}
+
+@media (max-width: 479px) {
+  body {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=body.css.map */
