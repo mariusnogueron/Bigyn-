@@ -3,7 +3,7 @@
  * 8 |   @include button($color: $--green-color, $colorBackground: $--black ,$colorBorder: $--black);
  *   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  *   '
- *   header.scss 8:3  root stylesheet */
+ *   join.scss 8:3  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",

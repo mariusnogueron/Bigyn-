@@ -1,0 +1,22 @@
+.container__clients {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  .unit-vinyl {
+    //line-height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    font-family: $--Avenue;
+    font-size: 2em;
+    a {
+
+      img {
+        max-width: 7em;
+        cursor: pointer;
+      }
+    }
+
+  }
+}

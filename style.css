@@ -1,9 +1,9 @@
 /* Error: Can't find stylesheet to import.
  *    ,
- * 10 | @import "public/scss/idk";
- *    |         ^^^^^^^^^^^^^^^^^
+ * 16 | @import "public/scss/footer";
+ *    |         ^^^^^^^^^^^^^^^^^^^^
  *    '
- *   style.scss 10:9  root stylesheet */
+ *   style.scss 16:9  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 10 \2502  @import \"public/scss/idk\";\a    \2502          ^^^^^^^^^^^^^^^^^\a    \2575 \a   style.scss 10:9  root stylesheet";
+  content: "Error: Can't find stylesheet to import.\a    \2577 \a 16 \2502  @import \"public/scss/footer\";\a    \2502          ^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   style.scss 16:9  root stylesheet";
 }

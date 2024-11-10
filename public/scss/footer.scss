@@ -1,0 +1,74 @@
+.container__footer {
+  a {
+    text-decoration: none;
+    width: fit-content;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+  }
+  }
+
+  .wrapper__rectangle {
+    position: relative;
+    .googly-eyes {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateY(-98%);
+    }
+    .text-footer {
+      display: flex;
+      height: 220px;
+      background: $--darkgreen-color;
+      padding-inline: 10em;
+      position: relative;
+      gap: 10rem;
+
+      h3{
+        font-family: $--Seamus;
+        position: absolute;
+
+        color: $--green-color;
+        font-size: clamp(3.5rem, 1.79rem + 3.566vw, 5rem);
+        -webkit-text-stroke: 1px #8ABC83;
+
+        &:before {
+          content: 'Notre studio';
+          position: absolute;
+          color: $--pink-color;
+          bottom: 10px;
+          left: -10px;
+          -webkit-text-stroke: 1px #DA84AC;
+        }
+        top: 0;
+        transform: translateY(-50%);
+      }
+
+      strong{
+        color: $--pink-color;
+        font-family: $--Aileron-Regular;
+        margin-bottom: .5em;
+      }
+      span {
+        font-family: $--Avenue;
+        color: white;
+      }
+
+
+      .infos {
+        display: flex;
+        flex-direction: column;
+        gap: .4em;
+        font-size: 17px;
+        justify-content: center;
+
+        .infos-list {
+          display: flex;
+          gap: 1rem;
+
+        }
+      }
+    }
+  }
+}

@@ -6,14 +6,18 @@ body {
   width: fit-content;
 }
 
-h1 {
+html {
+  scroll-behavior: smooth;
+}
+
+h1,h2,h3,h4,h5,h6,p {
   margin: 0;
 }
 
 
 //MEDIA QUERIES
 
-@media (max-width: 479px) {
+@media (max-width: 767px) {
   body {
     display: none;
   }

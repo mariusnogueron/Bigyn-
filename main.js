@@ -1,6 +1,12 @@
 import './style.scss'
+import 'vanilla-tilt'
+
+import Header from './components/header.js'
 
 
+window.addEventListener('load', () => {
+    document.body.prepend(Header());
+})
 
 const transitionBar = document.querySelector('.transition__bar');
 
@@ -10,8 +16,6 @@ const oddBar = document.createElement('div');
 oddBar.classList.add('odd-bar');
 
 for (let i = 0; i < 6; i++) {
-    console.log(i)
-
     if (i % 2 === 0) {
         transitionBar.appendChild(oddBar.cloneNode(true));
     }
@@ -19,6 +23,7 @@ for (let i = 0; i < 6; i++) {
         transitionBar.appendChild(evenBar.cloneNode(true));
     }
 }
+
 
 
 

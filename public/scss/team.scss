@@ -1,0 +1,31 @@
+.container__team {
+  padding: 4.5em;
+  .all-member{
+    display: flex;
+    gap: 1rem;
+
+  }
+  h2 {
+    font-family: $--Seamus;
+    color: $--darkgreen-color;
+    font-size: clamp(3.5rem, 1.79rem + 3.566vw, 5rem);
+    margin-bottom: 4rem;
+  }
+  .character {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    img {
+      width: 100%;
+    }
+    span {
+      margin-top: .4em;
+      font-family: $--Avenue;
+      font-size: clamp(1rem, 0.43rem + 1.189vw, 1.5rem);
+    }
+    strong {
+      font-family: $--Avenue;
+      font-size: clamp(0.8rem, 0.572rem + 0.475vw, 1rem);
+    }
+  }
+}

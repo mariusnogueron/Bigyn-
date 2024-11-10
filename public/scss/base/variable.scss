@@ -1,13 +1,17 @@
 //COLORS
 $--green-color: #B2F76E;
+$--darkgreen-color: #233412;
 $--pink-color: #EAACC9;
 $--black: rgba(0, 0, 0, 0.9);
 
 //FONT
 $--Avenue: 'Avenue X';
 $--Seamus: 'Seamus Trial';
-$--Aileron-Semibold: 'Aileron Semibold';
-$--Aileron-LightItalic: 'Aileron';
+$--Aileron-Semibold: 'Aileron-Heavy';
+$--Aileron-SemiboldItalic: 'Aileron-SemiboldItalic';
+$--Aileron-LightItalic: 'Aileron-ThinItalic';
+$--Aileron-Regular: 'Aileron-Regular';
+$--Outward: 'Outward';
 
 @font-face {
   font-family: 'Avenue X';
@@ -20,11 +24,26 @@ $--Aileron-LightItalic: 'Aileron';
 }
 
 @font-face {
-  font-family: 'Aileron Semibold';
-  src: url("//fonts/Aileron-SemiBold.otf") format("opentype");
+  font-family: 'Outward';
+  src: url("//fonts/outward-block-webfont") format("truetype");
 }
 
 @font-face {
-  font-family: 'Aileron';
-  src: url("//fonts/Aileron-LightItalic.otf") format("opentype");
+  font-family: 'Aileron Regular';
+  src: url("/fonts/Aileron-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Aileron-Heavy';
+  src: url("/fonts/Aileron-Heavy.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Aileron-ThinItalic';
+  src: url("/fonts/Aileron-ThinItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Aileron-SemiBoldItalic';
+  src: url("/fonts/Aileron-SemiBoldItalic.otf") format("opentype") ;
 }

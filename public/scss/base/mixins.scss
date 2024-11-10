@@ -1,11 +1,11 @@
 //MIXIN
-@mixin button ($color : $--black ,$colorBackground : $--green-color, $colorBorder : transparent, $font-size :clamp(1.5rem,2svw, 2rem)  ) {
+@mixin button ($color : $--black ,$colorBackground : $--green-color, $colorBorder : transparent, $font-size :clamp(1.5rem,2svw, 2rem), $padding: .8em 2.8em  ) {
   color: $color;
   background-color: $colorBackground;
   border: 1px solid $colorBorder;
   font-family: $--Avenue;
   text-decoration: none;
-  padding: .5rem 1.5rem;
+  padding: $padding;
   border-radius: 9999px;
   font-size: $font-size;
 }

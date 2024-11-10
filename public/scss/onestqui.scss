@@ -1,0 +1,119 @@
+.container__onestqui {
+  height: 100svh;
+
+  .wrapper__onestqui {
+    padding: 4.5em
+  }
+
+  .title__part-onestqui {
+    h2 {
+      font-family: $--Seamus;
+      color: $--darkgreen-color;
+      font-size: clamp(5.5rem, 4.93rem + 1.189vw, 6rem);
+      position: relative;
+      width: fit-content;
+      margin-bottom: 1em;
+
+      &:after {
+        content: "A vrai dire, pas grand chose à l’échelle de l’univers";
+        font-family: $--Aileron-SemiboldItalic;
+        font-size: 1rem;
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 2%
+
+      }
+    }
+    span {
+      font-family: $--Aileron-LightItalic;
+
+    }
+  }
+
+  .wrapper__onestqui-content {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+    .wrapper__all-text {
+      display: flex;
+      flex-direction: column;
+      max-width: 40%;
+      gap: 1em;
+      //position: relative;
+
+      .text-description-onestqui {
+
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+
+        strong {
+          font-family: $--Seamus;
+          color: $--darkgreen-color;
+          font-size: clamp(1.5rem, 1.044rem + 0.951vw, 1.9rem);
+        }
+        span {
+          font-family: $--Aileron-Semibold;
+          font-size: clamp(1.3rem, 0.844rem + 0.951vw, 1.7rem);
+        }
+        p {
+          font-family: $--Aileron-Regular;
+          font-size: clamp(1rem, 0.772rem + 0.475vw, 1.2rem);
+        }
+      }
+    }
+
+
+
+    img {
+      width: clamp(18.75rem, 1.156rem + 36.701vw, 34.188rem);
+      animation: rotateInfinite 8s linear infinite;
+    }
+  }
+
+  .wrapper-marquee {
+    font-size: 6rem;
+    overflow-x: hidden;
+    white-space: nowrap;
+    width: 90%;
+    max-width: 1440px;
+    display: flex;
+    gap: 1rem;
+    margin-inline: auto;
+    mask-image: linear-gradient(
+                    to right,
+                    rgba(0, 0, 0, 0),
+                    rgba(0, 0, 0, 1) 10%,
+                    rgba(0, 0, 0, 1) 80%,
+                    rgba(0, 0, 0, 0)
+    );
+
+
+
+    .transition__marquee-scroll {
+      animation: infiniteScroll 10s linear infinite;
+      font-family: $--Outward;
+      width: max-content;
+      display: inline-block;
+
+    }
+  }
+
+}
+
+//ANIMATIONS
+@keyframes infiniteScroll {
+  to {
+    transform: translate(calc(-100% - 1rem));
+  }
+}
+
+@keyframes rotateInfinite {
+  to {
+    transform: rotate(360deg);
+  }
+}

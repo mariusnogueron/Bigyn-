@@ -17,7 +17,7 @@
   flex-direction: column;
 
   p {
-    font-size: clamp(1.5rem,3svw, 3rem);
+    font-size: 1rem
   }
 }
 
@@ -28,15 +28,15 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  max-width: 1440px;
+  z-index: 1;
 
   .img-logo img {
-    width: clamp(2.5rem,3svw, 4rem);
+    width: clamp(2.5rem, 1.93rem + 1.189vw, 3rem);
   }
 
   .button__header {
     a {
-      @include button($colorBorder : $--black, $font-size : 1rem);
+      @include button($colorBorder : $--black, $font-size : clamp(0.85rem, 0.679rem + 0.357vw, 1rem));
     }
   }
 }
