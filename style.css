@@ -1,17 +1,527 @@
-/* Error: Can't find stylesheet to import.
- *    ,
- * 16 | @import "public/scss/footer";
- *    |         ^^^^^^^^^^^^^^^^^^^^
- *    '
- *   style.scss 16:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 16 \2502  @import \"public/scss/footer\";\a    \2502          ^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   style.scss 16:9  root stylesheet";
+@charset "UTF-8";
+@font-face {
+  font-family: "Avenue X";
+  src: url("//fonts/Avenue_X.otf") format("opentype");
 }
+@font-face {
+  font-family: "Seamus Trial";
+  src: url("//fonts/SeamusTrial-Heavy.otf") format("opentype");
+}
+@font-face {
+  font-family: "Outward";
+  src: url("//fonts/outward-block-webfont") format("truetype");
+}
+@font-face {
+  font-family: "Aileron Regular";
+  src: url("/fonts/Aileron-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Aileron-Heavy";
+  src: url("/fonts/Aileron-Heavy.otf") format("opentype");
+}
+@font-face {
+  font-family: "Aileron-ThinItalic";
+  src: url("/fonts/Aileron-ThinItalic.otf") format("opentype");
+}
+@font-face {
+  font-family: "Aileron-SemiBoldItalic";
+  src: url("/fonts/Aileron-SemiBoldItalic.otf") format("opentype");
+}
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  body {
+    display: none;
+  }
+}
+.container__home {
+  height: 100svh;
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.main-content__home {
+  position: relative;
+  height: 100%;
+  z-index: -1;
+}
+.main-content__home .grid__images {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  width: 100svw;
+  height: 100%;
+  aspect-ratio: 1/1;
+  max-width: 1440px;
+}
+.main-content__home .grid__images img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.main-content__home .grid__images .image-grid-1 {
+  grid-area: 9/7/14/11;
+  aspect-ratio: 1/1;
+  max-width: 300px;
+}
+.main-content__home .grid__images .image-grid-2 {
+  grid-area: 4/2/9/5;
+  aspect-ratio: 1/1;
+  max-width: 266px;
+}
+.main-content__home .grid__images .image-grid-3 {
+  grid-area: 2/6/5/8;
+  aspect-ratio: 1/1;
+  max-width: 200px;
+}
+.main-content__home .grid__images .image-grid-4 {
+  grid-area: 16/10/19/13;
+  aspect-ratio: 1/1;
+  max-width: 200px;
+}
+.main-content__home .grid__images .image-grid-5 {
+  grid-area: 4/10/7/13;
+  aspect-ratio: 1/1;
+  max-width: 235px;
+}
+.main-content__home .grid__images .image-grid-6 {
+  grid-area: 17/3/19/5;
+  aspect-ratio: 1/1;
+  max-width: 113px;
+}
+.main-content__home .title-home {
+  position: absolute;
+  top: 470px;
+  left: 120px;
+}
+.main-content__home .title-home h1 {
+  font-family: "Seamus Trial";
+  color: #B2F76E;
+  font-size: clamp(3rem, 12svw, 8rem);
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.main-content__home .title-home span {
+  font-family: "Aileron-ThinItalic";
+  width: 100%;
+  display: block;
+  font-size: 1.5rem;
+}
+.main-content__home .bow-arrow__scroll {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main-content__home .bow-arrow__scroll .container__text-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  animation: rotate360infinite 8s linear infinite;
+}
+.main-content__home .bow-arrow__scroll .container__text-arrow span {
+  position: absolute;
+  font-family: "Avenue X";
+}
+.main-content__home .bow-arrow__scroll .container__text-arrow span:nth-child(1) {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main-content__home .bow-arrow__scroll .container__text-arrow span:nth-child(2) {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(90deg) translateY(-100%);
+}
+.main-content__home .bow-arrow__scroll .container__text-arrow span:nth-child(3) {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}
+.main-content__home .bow-arrow__scroll .container__text-arrow span:nth-child(4) {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(-90deg) translateY(-100%);
+}
+
+@keyframes rotate360infinite {
+  from {
+    transform: translateY(-50%) translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) translateX(-50%) rotate(360deg);
+  }
+}
+.transition__bar {
+  height: 100svh;
+  display: flex;
+}
+.transition__bar .odd-bar {
+  background: #B2F76E;
+  height: 100%;
+  width: 16.6666666667%;
+}
+.transition__bar .even-bar {
+  height: 100%;
+  width: 16.6666666667%;
+  background: #EAACC9;
+}
+
+.container__onestqui {
+  height: 100svh;
+}
+.container__onestqui .wrapper__onestqui {
+  padding: 4.5em;
+}
+.container__onestqui .title__part-onestqui h2 {
+  font-family: "Seamus Trial";
+  color: #233412;
+  font-size: clamp(5.5rem, 4.93rem + 1.189vw, 6rem);
+  position: relative;
+  width: fit-content;
+  margin-bottom: 1em;
+}
+.container__onestqui .title__part-onestqui h2:after {
+  content: "A vrai dire, pas grand chose à l’échelle de l’univers";
+  font-family: "Aileron-SemiboldItalic";
+  font-size: 1rem;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 2%;
+}
+.container__onestqui .title__part-onestqui span {
+  font-family: "Aileron-ThinItalic";
+}
+.container__onestqui .wrapper__onestqui-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.container__onestqui .wrapper__onestqui-content .wrapper__all-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+  gap: 1em;
+}
+.container__onestqui .wrapper__onestqui-content .wrapper__all-text .text-description-onestqui {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.container__onestqui .wrapper__onestqui-content .wrapper__all-text .text-description-onestqui strong {
+  font-family: "Seamus Trial";
+  color: #233412;
+  font-size: clamp(1.5rem, 1.044rem + 0.951vw, 1.9rem);
+}
+.container__onestqui .wrapper__onestqui-content .wrapper__all-text .text-description-onestqui span {
+  font-family: "Aileron-Heavy";
+  font-size: clamp(1.3rem, 0.844rem + 0.951vw, 1.7rem);
+}
+.container__onestqui .wrapper__onestqui-content .wrapper__all-text .text-description-onestqui p {
+  font-family: "Aileron-Regular";
+  font-size: clamp(1rem, 0.772rem + 0.475vw, 1.2rem);
+}
+.container__onestqui .wrapper__onestqui-content img {
+  width: clamp(18.75rem, 1.156rem + 36.701vw, 34.188rem);
+  animation: rotateInfinite 8s linear infinite;
+}
+.container__onestqui .wrapper-marquee {
+  font-size: 6rem;
+  overflow-x: hidden;
+  white-space: nowrap;
+  width: 90%;
+  max-width: 1440px;
+  display: flex;
+  gap: 1rem;
+  margin-inline: auto;
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 10%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0));
+}
+.container__onestqui .wrapper-marquee .transition__marquee-scroll {
+  animation: infiniteScroll 10s linear infinite;
+  font-family: "Outward";
+  width: max-content;
+  display: inline-block;
+}
+
+@keyframes infiniteScroll {
+  to {
+    transform: translate(calc(-100% - 1rem));
+  }
+}
+@keyframes rotateInfinite {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.inactive {
+  display: none;
+}
+
+.container__clients {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.container__clients .unit-vinyl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  font-family: "Avenue X";
+  font-size: 2em;
+}
+.container__clients .unit-vinyl a img {
+  max-width: 7em;
+  cursor: pointer;
+}
+
+.container__team {
+  padding: 4.5em;
+}
+.container__team .all-member {
+  display: flex;
+  gap: 1rem;
+}
+.container__team h2 {
+  font-family: "Seamus Trial";
+  color: #233412;
+  font-size: clamp(3.5rem, 1.79rem + 3.566vw, 5rem);
+  margin-bottom: 4rem;
+}
+.container__team .character {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+.container__team .character img {
+  width: 100%;
+}
+.container__team .character span {
+  margin-top: 0.4em;
+  font-family: "Avenue X";
+  font-size: clamp(1rem, 0.43rem + 1.189vw, 1.5rem);
+}
+.container__team .character strong {
+  font-family: "Avenue X";
+  font-size: clamp(0.8rem, 0.572rem + 0.475vw, 1rem);
+}
+
+.container__join h2 {
+  font-family: "Seamus Trial";
+  color: #EAACC9;
+}
+.container__join p {
+  font-family: "Avenue X";
+}
+.container__join .wrapper__mail-join strong {
+  font-family: "Avenue X";
+}
+.container__join .wrapper__mail-join a {
+  color: rgba(0, 0, 0, 0.9);
+  background-color: #B2F76E;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  font-family: "Avenue X";
+  text-decoration: none;
+  padding: 0.5em 3.8em;
+  border-radius: 9999px;
+  font-size: 1.2rem;
+  display: inline-block;
+}
+
+.container__join-team {
+  padding: 9em 9em 0 9em;
+  display: flex;
+  flex-direction: column;
+  gap: 6em;
+}
+.container__join-team .join-team-text h2 {
+  color: #EAACC9;
+  font-family: "Seamus Trial";
+  font-size: 3rem;
+  margin-bottom: 0.6em;
+}
+.container__join-team .join-team-text h3 {
+  color: #233412;
+  font-family: "Seamus Trial";
+  font-size: 2rem;
+  position: relative;
+  width: fit-content;
+  margin-bottom: 0.6em;
+}
+.container__join-team .join-team-text h3:after {
+  content: "👀";
+  position: absolute;
+  transform: rotate(-10deg);
+  font-size: 6.5rem;
+  bottom: -3rem;
+  right: -11rem;
+}
+.container__join-team .join-team-text a {
+  color: rgba(0, 0, 0, 0.9);
+  background-color: #B2F76E;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  font-family: "Avenue X";
+  text-decoration: none;
+  padding: 0.5em 3.8em;
+  border-radius: 9999px;
+  font-size: 1.2rem;
+  display: inline-block;
+}
+.container__join-team .wrapper-samples {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: fit-content;
+}
+.container__join-team span {
+  font-family: "Avenue X";
+  font-size: 1.4rem;
+}
+.container__join-team .samples-team {
+  display: flex;
+  gap: 1em;
+}
+.container__join-team .samples-team img {
+  width: 100px;
+  border: 1px solid black;
+}
+
+.button__fictive-accept {
+  color: #B2F76E;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  font-family: "Avenue X";
+  text-decoration: none;
+  padding: 0.8em 2.8em;
+  border-radius: 9999px;
+  font-size: clamp(1.5rem, 2svw, 2rem);
+  border: 4px solid #B2F76E;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 4px 4px;
+}
+
+.background__prevention {
+  width: 100%;
+  height: 100svh;
+  background: #B2F76E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Avenue X";
+  flex-direction: column;
+}
+.background__prevention p {
+  font-size: 1rem;
+}
+
+.container__header {
+  display: inline-flex;
+  position: fixed;
+  width: -webkit-fill-available;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  z-index: 1;
+}
+.container__header .img-logo img {
+  width: clamp(2.5rem, 1.93rem + 1.189vw, 3rem);
+}
+.container__header .button__header a {
+  color: rgba(0, 0, 0, 0.9);
+  background-color: #B2F76E;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  font-family: "Avenue X";
+  text-decoration: none;
+  padding: 0.8em 2.8em;
+  border-radius: 9999px;
+  font-size: clamp(0.85rem, 0.679rem + 0.357vw, 1rem);
+}
+
+footer {
+  display: flex;
+  height: 433px;
+  align-items: end;
+}
+
+.container__footer {
+  width: 100%;
+}
+.container__footer a {
+  text-decoration: none;
+  width: fit-content;
+}
+.container__footer a:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+.container__footer .wrapper__rectangle {
+  position: relative;
+}
+.container__footer .wrapper__rectangle .googly-eyes {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(-98%);
+}
+.container__footer .wrapper__rectangle .text-footer {
+  display: flex;
+  height: 220px;
+  background: #233412;
+  padding-inline: 10em;
+  position: relative;
+  gap: 10rem;
+}
+.container__footer .wrapper__rectangle .text-footer h3 {
+  font-family: "Seamus Trial";
+  position: absolute;
+  color: #B2F76E;
+  font-size: clamp(3.5rem, 1.79rem + 3.566vw, 5rem);
+  -webkit-text-stroke: 1px #8ABC83;
+  top: 0;
+  transform: translateY(-50%);
+}
+.container__footer .wrapper__rectangle .text-footer h3:before {
+  content: "Notre studio";
+  position: absolute;
+  color: #EAACC9;
+  bottom: 7px;
+  left: -10px;
+  -webkit-text-stroke: 1px #DA84AC;
+}
+.container__footer .wrapper__rectangle .text-footer strong {
+  color: #EAACC9;
+  font-family: "Aileron-Regular";
+  margin-bottom: 0.5em;
+}
+.container__footer .wrapper__rectangle .text-footer span {
+  font-family: "Avenue X";
+  color: white;
+}
+.container__footer .wrapper__rectangle .text-footer .infos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  font-size: 17px;
+  justify-content: center;
+}
+.container__footer .wrapper__rectangle .text-footer .infos .infos-list {
+  display: flex;
+  gap: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */

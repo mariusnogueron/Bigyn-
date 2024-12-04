@@ -1,0 +1,20 @@
+
+.container__join {
+  h2 {
+    font-family: $--Seamus;
+    color: $--pink-color;
+  }
+  p {
+    font-family: $--Avenue;
+  }
+
+  .wrapper__mail-join {
+    strong {
+      font-family: $--Avenue;
+    }
+    a {
+      @include button($colorBorder : $--black, $font-size : 1.2rem, $padding: 0.5em 3.8em);
+      display: inline-block;
+    }
+  }
+}

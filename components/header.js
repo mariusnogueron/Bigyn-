@@ -4,11 +4,11 @@ export default function Header() {
     Header.innerHTML = `
     <div class="container__header">
         <div class="img-logo">
-            <img src="/img/logo.svg" alt="logo de l'entreprise">
+           <a href="/index.html"><img src="/img/logo.svg" alt="logo de l'entreprise"></a> 
         </div>
         <div class="button__header">
-            <a href="#">Creer ton vinyle</a>
-            <a href="#">Nous rejoindre</a>
+            <a href="/join/">Creer ton vinyle</a>
+            <a href="/create-vinyl/">Nous rejoindre</a>
         </div>
     </div>
     `

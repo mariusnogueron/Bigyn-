@@ -10,6 +10,7 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'index.html'),
                 join: resolve(__dirname, 'join/index.html'),
+                create: resolve(__dirname, 'create-vinyl/index.html'),
             },
         },
     },

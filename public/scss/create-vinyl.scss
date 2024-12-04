@@ -1,0 +1,57 @@
+.container__join-team {
+  padding: 9em 9em 0 9em;
+  display: flex;
+  flex-direction: column;
+  gap: 6em;
+  .join-team-text {
+    h2 {
+      color: $--pink-color;
+      font-family: $--Seamus;
+      font-size: 3rem;
+      margin-bottom: .6em;
+    }
+    h3 {
+      color: $--darkgreen-color;
+      font-family: $--Seamus;
+      font-size: 2rem;
+      position: relative;
+      width: fit-content;
+      margin-bottom: .6em;
+
+      &:after {
+        content: "👀";
+        position: absolute;
+        transform: rotate(-10deg);
+        font-size: 6.5rem;
+        bottom: -3rem;
+        right: -11rem;
+
+      }
+    }
+    a {
+      @include button($colorBorder : $--black, $font-size : 1.2rem, $padding: 0.5em 3.8em);
+      display: inline-block;
+    }
+  }
+
+  .wrapper-samples{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: fit-content;
+  }
+  span {
+    font-family: $--Avenue;
+    font-size: 1.4rem;
+  }
+
+  .samples-team {
+    display: flex;
+    gap: 1em;
+    img {
+      width: 100px;
+      border: 1px solid black;
+
+    }
+  }
+}

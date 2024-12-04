@@ -2,10 +2,12 @@ import './style.scss'
 import 'vanilla-tilt'
 
 import Header from './components/header.js'
+import Footer from './components/footer.js'
 
 
 window.addEventListener('load', () => {
     document.body.prepend(Header());
+    document.body.appendChild(Footer());
 })
 
 const transitionBar = document.querySelector('.transition__bar');

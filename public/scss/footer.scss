@@ -1,4 +1,10 @@
+footer {
+  display: flex;
+  height: 433px;
+  align-items: end;
+}
 .container__footer {
+  width: 100%;
   a {
     text-decoration: none;
     width: fit-content;
@@ -37,7 +43,7 @@
           content: 'Notre studio';
           position: absolute;
           color: $--pink-color;
-          bottom: 10px;
+          bottom: 7px;
           left: -10px;
           -webkit-text-stroke: 1px #DA84AC;
         }
