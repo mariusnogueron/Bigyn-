@@ -1,23 +1,39 @@
 .container__clients {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 2em;
+  padding: 4em 2em;
+
   .unit-vinyl {
-    //line-height: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2em;
     font-family: $--Avenue;
     font-size: 2em;
-    a {
 
-      img {
-        max-width: 7em;
-        position: absolute;
-        cursor: pointer;
+    span {
+      flex: 1;
+      text-align: center;
+
+      &:first-child {
+        text-align: right;
+      }
+
+      &:last-child {
+        text-align: left;
       }
     }
 
+    a {
+      flex-shrink: 0;
+
+      img {
+        width: 7em;
+        max-width: 200px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+    }
   }
 }

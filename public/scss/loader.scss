@@ -1,0 +1,22 @@
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: $--pink-color;
+  z-index: 9999;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 2rem;
+
+  .loader__percentage {
+    font-family: $--Avenue;
+    font-size: clamp(3rem, 10vw, 8rem);
+    color: $--black;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+}
