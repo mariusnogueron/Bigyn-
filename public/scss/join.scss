@@ -1,0 +1,449 @@
+// ================================
+// JOIN PAGE STYLES
+// ================================
+
+.page-join {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+// ================================
+// HERO SECTION
+// ================================
+.join-hero {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 6em 4.5em;
+  background: linear-gradient(135deg, $--green-color 0%, darken($--green-color, 10%) 100%);
+  overflow: hidden;
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+  }
+
+  &__label {
+    display: inline-block;
+    font-family: $--Avenue;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    color: $--darkgreen-color;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.5em 1.5em;
+    border-radius: 9999px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    animation: fadeInDown 0.8s ease-out;
+  }
+
+  &__title {
+    font-family: $--Seamus;
+    font-size: clamp(3rem, 10vw, 7rem);
+    color: $--darkgreen-color;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+
+    em {
+      font-style: italic;
+      color: $--pink-color;
+      display: block;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0.1em;
+        left: 0;
+        width: 100%;
+        height: 0.08em;
+        background: $--pink-color;
+        transform: scaleX(0);
+        transform-origin: left;
+        animation: underlineGrow 0.8s ease-out 1s forwards;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-family: $--Aileron-Regular;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    color: $--darkgreen-color;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.9;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+  }
+
+  &__visual {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  &__circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba($--darkgreen-color, 0.15);
+
+    &--1 {
+      width: 400px;
+      height: 400px;
+      top: -100px;
+      right: -100px;
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    &--2 {
+      width: 300px;
+      height: 300px;
+      bottom: -50px;
+      left: -50px;
+      animation: pulse 4s ease-in-out infinite 1s;
+    }
+
+    &--3 {
+      width: 200px;
+      height: 200px;
+      top: 50%;
+      left: 10%;
+      animation: pulse 4s ease-in-out infinite 2s;
+    }
+  }
+}
+
+// ================================
+// WHY SECTION
+// ================================
+.join-why {
+  padding: 8em 4.5em;
+  background: white;
+
+  &__title {
+    font-family: $--Seamus;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    color: $--darkgreen-color;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: $--pink-color;
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__card {
+    background: $--darkgreen-color;
+    padding: 2.5em;
+    border-radius: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: $--green-color;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba($--darkgreen-color, 0.3);
+
+      &::before {
+        transform: scaleX(1);
+      }
+
+      .join-why__number {
+        color: $--green-color;
+      }
+    }
+
+    h3 {
+      font-family: $--Aileron-Semibold;
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-family: $--Aileron-Regular;
+      font-size: clamp(0.9rem, 1.2vw, 1rem);
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.7;
+    }
+  }
+
+  &__number {
+    font-family: $--Seamus;
+    font-size: 3rem;
+    color: $--pink-color;
+    opacity: 0.6;
+    margin-bottom: 0.5rem;
+    display: block;
+    transition: color 0.4s ease;
+  }
+}
+
+// ================================
+// PROFILES SECTION
+// ================================
+.join-profiles {
+  padding: 8em 4.5em;
+  background: $--pink-color;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h2 {
+      font-family: $--Seamus;
+      font-size: clamp(2rem, 5vw, 4rem);
+      color: $--darkgreen-color;
+    }
+  }
+
+  &__accent {
+    width: 60px;
+    height: 60px;
+    background: $--green-color;
+    border-radius: 50%;
+    margin: 1.5rem auto 0;
+    position: relative;
+    animation: bounce 2s ease-in-out infinite;
+
+    &::before {
+      content: '?';
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: $--Seamus;
+      font-size: 2rem;
+      color: $--darkgreen-color;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background: white;
+    padding: 2em;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid transparent;
+
+    &:hover {
+      transform: translateX(10px);
+      box-shadow: 0 10px 30px rgba($--darkgreen-color, 0.15);
+      border-left-color: $--green-color;
+
+      .join-profiles__icon {
+        background: $--green-color;
+        transform: rotate(10deg);
+      }
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: $--darkgreen-color;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+
+    svg {
+      width: 28px;
+      height: 28px;
+      stroke: white;
+    }
+  }
+
+  &__info {
+    h3 {
+      font-family: $--Aileron-Semibold;
+      font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+      color: $--darkgreen-color;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-family: $--Aileron-Regular;
+      font-size: clamp(0.9rem, 1.2vw, 1rem);
+      color: rgba($--darkgreen-color, 0.8);
+      line-height: 1.6;
+    }
+  }
+}
+
+// ================================
+// CTA SECTION
+// ================================
+.join-cta {
+  padding: 8em 4.5em;
+  background: $--darkgreen-color;
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+
+    h2 {
+      font-family: $--Seamus;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      color: $--green-color;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-family: $--Aileron-Regular;
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__button {
+    @include button($color: $--darkgreen-color, $colorBackground: $--green-color, $font-size: clamp(1.2rem, 2vw, 1.5rem), $padding: 1em 3em);
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 30px rgba($--green-color, 0.4);
+    }
+  }
+
+  &__decoration {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    pointer-events: none;
+    opacity: 0.15;
+  }
+
+  &__emoji {
+    font-size: clamp(4rem, 10vw, 8rem);
+    animation: float 3s ease-in-out infinite;
+
+    &:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 1s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 2s;
+    }
+  }
+}
+
+// ================================
+// ANIMATIONS
+// ================================
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes underlineGrow {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}

@@ -1,22 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Créer son vinyl</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rejoindre Bigyn</title>
     <link rel="stylesheet" href="style.scss">
     <script defer type="module" src="../main.js"></script>
 </head>
 <body>
-<div class="container__join">
-    <h2>Nous rejoindre</h2>
-    <p>On a de plus en plus de responsabilités alors on aimerait faire grandir l’équipe.</p>
+<main class="page-join">
+    <!-- Hero Section -->
+    <section class="join-hero">
+        <div class="join-hero__content">
+            <span class="join-hero__label">Rejoins l'aventure</span>
+            <h1 class="join-hero__title">Fais partie de <br><em>l'équipe Bigyn</em></h1>
+            <p class="join-hero__subtitle">On grandit, on évolue, et on cherche des talents passionnés pour nous accompagner dans cette aventure créative.</p>
+        </div>
+        <div class="join-hero__visual">
+            <div class="join-hero__circle join-hero__circle--1"></div>
+            <div class="join-hero__circle join-hero__circle--2"></div>
+            <div class="join-hero__circle join-hero__circle--3"></div>
+        </div>
+    </section>
 
+    <!-- Pourquoi nous rejoindre -->
+    <section class="join-why">
+        <h2 class="join-why__title">Pourquoi nous ?</h2>
+        <div class="join-why__grid">
+            <article class="join-why__card">
+                <span class="join-why__number">01</span>
+                <h3>Créativité sans limites</h3>
+                <p>Ici, chaque projet est une nouvelle toile. On encourage les idées folles et les expérimentations audacieuses.</p>
+            </article>
+            <article class="join-why__card">
+                <span class="join-why__number">02</span>
+                <h3>Ambiance collaborative</h3>
+                <p>Pas de hiérarchie toxique. On travaille ensemble, on partage, on s'entraide. L'équipe avant tout.</p>
+            </article>
+            <article class="join-why__card">
+                <span class="join-why__number">03</span>
+                <h3>Projets passionnants</h3>
+                <p>Des artistes émergents aux noms établis, on donne vie à des projets musicaux qui comptent.</p>
+            </article>
+            <article class="join-why__card">
+                <span class="join-why__number">04</span>
+                <h3>Évolution constante</h3>
+                <p>Le studio grandit et toi aussi. On investit dans nos talents et on offre de vraies opportunités de progression.</p>
+            </article>
+        </div>
+    </section>
 
-    <div class="wrapper__mail-join">
-        <strong>Tu veux faire partie des notres ?</strong>
-        <strong>Envoie nous un petit message en cliquant sur le lien: </strong>
-        <a href="mailto:info@bigyn.com">Mail</a>
-    </div>
-</div>
+    <!-- Ce qu'on recherche -->
+    <section class="join-profiles">
+        <div class="join-profiles__header">
+            <h2>On recherche des profils comme</h2>
+            <div class="join-profiles__accent"></div>
+        </div>
+        <div class="join-profiles__list">
+            <div class="join-profiles__item">
+                <div class="join-profiles__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
+                </div>
+                <div class="join-profiles__info">
+                    <h3>Designers Graphiques</h3>
+                    <p>Tu maîtrises Illustrator, Photoshop et tu as un oeil pour les covers qui claquent ? On veut te voir.</p>
+                </div>
+            </div>
+            <div class="join-profiles__item">
+                <div class="join-profiles__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2"/>
+                        <path d="M8 21h8M12 17v4"/>
+                    </svg>
+                </div>
+                <div class="join-profiles__info">
+                    <h3>Développeurs Web</h3>
+                    <p>Frontend, backend, ou fullstack — si tu codes avec passion et que tu aimes les projets créatifs, bienvenue.</p>
+                </div>
+            </div>
+            <div class="join-profiles__item">
+                <div class="join-profiles__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/>
+                    </svg>
+                </div>
+                <div class="join-profiles__info">
+                    <h3>Community Managers</h3>
+                    <p>Tu sais créer du lien avec une communauté et tu connais les codes des réseaux ? On t'attend.</p>
+                </div>
+            </div>
+            <div class="join-profiles__item">
+                <div class="join-profiles__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                </div>
+                <div class="join-profiles__info">
+                    <h3>Toute personne motivée</h3>
+                    <p>Tu ne rentres pas dans les cases mais tu as la passion et l'envie ? Écris-nous quand même !</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="join-cta">
+        <div class="join-cta__content">
+            <h2>Prêt à nous rejoindre ?</h2>
+            <p>Envoie-nous un message avec ton portfolio, ton CV, ou juste une présentation de toi. On a hâte de te découvrir.</p>
+            <a href="mailto:info@bigyn.com" class="join-cta__button">Contacte-nous</a>
+        </div>
+        <div class="join-cta__decoration">
+            <span class="join-cta__emoji">🎵</span>
+            <span class="join-cta__emoji">🎨</span>
+            <span class="join-cta__emoji">💿</span>
+        </div>
+    </section>
+</main>
 </body>
 </html>
