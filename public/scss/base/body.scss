@@ -3,6 +3,20 @@
 body {
   margin: 0 auto;
   box-sizing: border-box;
+  min-height: 100svh;
+}
+
+::selection {
+  background-color: rgba(178, 247, 110, 0.5);
+}
+
+::-moz-selection {
+  background-color: rgba(234, 172, 201, .5);
+}
+
+h2 {
+  font-size: clamp(3.5rem, 1.79rem + 3.566vw, 5rem);
+  font-family: $--Seamus;
 }
 
 html {
@@ -12,6 +26,22 @@ html {
 h1,h2,h3,h4,h5,h6,p {
   margin: 0;
 }
+
+
+//LENIS SCROLL
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
 
 
 //MEDIA QUERIES

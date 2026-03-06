@@ -11,8 +11,6 @@
 .main-content__home {
   position: relative;
   height: 100%;
-  z-index: -1;
-
 
   .grid__images {
     display: grid;
@@ -33,32 +31,37 @@
       grid-area: 9 / 7 / 14 / 11;
       aspect-ratio: 1/1;
       max-width: 300px;
+      line-height: 0;
     }
     .image-grid-2 {
       grid-area: 4 / 2 / 9 / 5;
       aspect-ratio: 1/1;
       max-width: 266px;
+      line-height: 0;
     }
     .image-grid-3 {
       grid-area: 2 / 6 / 5 / 8;
       aspect-ratio: 1/1;
       max-width: 200px;
+      line-height: 0;
     }
     .image-grid-4 {
       grid-area: 16 / 10 / 19 / 13;
       aspect-ratio: 1/1;
       max-width: 200px;
-
+      line-height: 0;
     }
     .image-grid-5 {
       grid-area: 4 / 10 / 7 / 13;
       aspect-ratio: 1/1;
       max-width: 235px;
+      line-height: 0;
     }
     .image-grid-6 {
       grid-area:  17 / 3 / 19 / 5;
       aspect-ratio: 1/1;
       max-width: 113px;
+      line-height: 0;
     }
 
   }
@@ -89,6 +92,12 @@
     bottom: 35px;
     left: 50%;
     transform: translateX(-50%);
+
+    a {
+      cursor: pointer;
+      text-decoration: none;
+      color: $--black;
+    }
 
     .container__text-arrow {
       position: absolute;

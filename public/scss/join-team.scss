@@ -1,8 +1,11 @@
 
 .container__join {
+  height: calc(100svh - 9em - 433px);
+  padding: $padding-other-page;
   h2 {
     font-family: $--Seamus;
     color: $--pink-color;
+    font-size: clamp(5.5rem, 4.93rem + 1.189vw, 6rem);
   }
   p {
     font-family: $--Avenue;

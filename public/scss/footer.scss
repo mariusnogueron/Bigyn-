@@ -2,6 +2,8 @@ footer {
   display: flex;
   height: 433px;
   align-items: end;
+  bottom: 0;
+  width: 100%;
 }
 .container__footer {
   width: 100%;
@@ -54,7 +56,7 @@ footer {
       strong{
         color: $--pink-color;
         font-family: $--Aileron-Regular;
-        margin-bottom: .5em;
+        margin-bottom: $span-strong-margin;
       }
       span {
         font-family: $--Avenue;

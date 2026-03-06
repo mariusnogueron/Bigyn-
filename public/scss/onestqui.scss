@@ -1,8 +1,7 @@
 .container__onestqui {
   height: 100svh;
-
   .wrapper__onestqui {
-    padding: 4.5em
+    margin: $section-padding $section-padding 0 $section-padding;
   }
 
   .title__part-onestqui {
@@ -12,7 +11,7 @@
       font-size: clamp(5.5rem, 4.93rem + 1.189vw, 6rem);
       position: relative;
       width: fit-content;
-      margin-bottom: 1em;
+      margin-bottom: $h2-margin;
 
       &:after {
         content: "A vrai dire, pas grand chose à l’échelle de l’univers";
@@ -79,20 +78,17 @@
     font-size: 6rem;
     overflow-x: hidden;
     white-space: nowrap;
-    width: 90%;
-    max-width: 1440px;
+    width: 100%;
     display: flex;
     gap: 1rem;
-    margin-inline: auto;
-    mask-image: linear-gradient(
-                    to right,
-                    rgba(0, 0, 0, 0),
-                    rgba(0, 0, 0, 1) 10%,
-                    rgba(0, 0, 0, 1) 80%,
-                    rgba(0, 0, 0, 0)
-    );
-
-
+    mask-image:
+            linear-gradient(
+                            to right,
+                            rgba(0, 0, 0, 0),
+                            rgba(0, 0, 1) 10%,
+                            rgba(0, 0, 0, 1) 80%,
+                            rgba(0, 0, 0, 0)
+            );
 
     .transition__marquee-scroll {
       animation: infiniteScroll 10s linear infinite;

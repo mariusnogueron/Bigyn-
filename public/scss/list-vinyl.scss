@@ -1,8 +1,56 @@
+.all-vinyl {
+  height: fit-content;
+  h2 {
+    margin-bottom: $h2-margin;
+    margin-left: 4rem;
+    color: $--pink-color;
+    -webkit-text-stroke: 1px black;
+  }
+}
+
 .container__clients {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 2em;
   padding: 4em 2em;
+  grid-template-columns: repeat(3, fit-content(100%));
+  font-family: $--Avenue;
+  font-size: 2em;
+  line-height: 0;
+  justify-content: center;
+
+  a + span,
+  & span:has(+ a) {
+    transition: transform 0.2s;
+  }
+
+  a:hover + span {
+    transform: translateX(1em);
+  }
+
+  & span:has(+ a:hover) {
+    transform: translateX(-1em);
+  }
+
+  .starting-point__vinylcard {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .ending-point__vinylcard {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  a {
+    width: fit-content;
+    display: contents;
+    img {
+      max-width: 8em;
+      cursor: pointer;
+      place-self: center;
+    }
+  }
 
   .unit-vinyl {
     display: flex;

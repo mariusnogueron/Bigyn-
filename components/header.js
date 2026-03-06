@@ -7,8 +7,8 @@ export default function Header() {
            <a href="/index.html"><img src="/img/logo.svg" alt="logo de l'entreprise"></a> 
         </div>
         <div class="button__header">
-            <a href="/join/">Creer ton vinyle</a>
-            <a href="/create-vinyl/">Nous rejoindre</a>
+            <a href="/create-vinyl/">Creer ton vinyle</a>
+            <a href="/join/">Nous rejoindre</a>
         </div>
     </div>
     `

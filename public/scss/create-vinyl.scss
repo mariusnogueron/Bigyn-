@@ -1,5 +1,5 @@
 .container__join-team {
-  padding: 9em 9em 0 9em;
+  padding: $padding-other-page;
   display: flex;
   flex-direction: column;
   gap: 6em;
@@ -49,7 +49,7 @@
     display: flex;
     gap: 1em;
     img {
-      width: 100px;
+      width: 7rem;
       border: 1px solid black;
 
     }

@@ -1,5 +1,5 @@
 .container__team {
-  padding: 4.5em;
+  padding: $section-padding;
   .all-member{
     display: flex;
     gap: 1rem;
@@ -9,17 +9,24 @@
     font-family: $--Seamus;
     color: $--darkgreen-color;
     font-size: clamp(3.5rem, 1.79rem + 3.566vw, 5rem);
-    margin-bottom: 4rem;
+    margin-bottom: $span-strong-margin;
   }
   .character {
     display: flex;
     flex-direction: column;
     width: fit-content;
+    height: fit-content;
     img {
       width: 100%;
+      filter: saturate(0);
+      transition: filter 0.1s ease-in-out;
+      &:hover {
+        filter: saturate(1);
+        cursor: pointer;
+      }
     }
     span {
-      margin-top: .4em;
+      margin-top: $span-strong-margin;
       font-family: $--Avenue;
       font-size: clamp(1rem, 0.43rem + 1.189vw, 1.5rem);
     }

@@ -1,0 +1,23 @@
+.button__fictive-accept {
+  @include button($color: $--green-color, $colorBackground: $--black ,$colorBorder: $--black);
+  border: 4px solid $--green-color;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 4px 4px;
+  cursor: pointer;
+}
+
+.background__prevention {
+  width: 100%;
+  height: 100svh;
+  background: $--green-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $--Avenue;
+  flex-direction: column;
+  z-index: 2;
+  position: absolute;
+
+  p {
+    font-size: 1rem
+  }
+}
